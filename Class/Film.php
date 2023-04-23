@@ -112,7 +112,7 @@ class Film
     {
         $result =   "Le film " . $this . "a été réalisé par " . $this->realisateur . "<br>";
         "Avec : <br>";
-        foreach ($this->casting as $cast => $casting) {
+        foreach ($this->casting as $casting) {
             $result .= $casting->getActeur() .
                 " dans le role de : " . $casting->getRole() . "<br>";
         }
