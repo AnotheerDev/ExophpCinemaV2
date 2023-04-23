@@ -26,7 +26,10 @@ spl_autoload_register(function ($class_name){
 });
 
 
+// Penser à créer une classe puis à la tester puis passer à la suite (ne pas tout créer d'un coup) realisateur => genre => film 
 
+// créer une classe associative pour mettre plusieurs classe ( acteur film ) dedans ex fin de la video 2
+// class associative pour acteur et film et Role / film et réal = filmographie.
 
 
 $mickaelKeaton = new Acteur("Mickaël", "Keaton", "masculin", "05-11-1951");
@@ -47,9 +50,16 @@ $sf = new Genre("Science-fiction");
 
 
 $starWars = new Film("Star-Wars", "19-10-1977", 121, $georgesLucas, $sf);
-$Batman = new Film("Batman", "19-07-1995", 122, $joelScott, $action);
+$batmanFilm = new Film("Batman", "19-07-1995", 122, $joelScott, $action);
 $bladeRunner = new Film("Blade Runner","15-09-1982", 117, $ridleyScott, $fantastique);
 
+
+$batman = new Role("Batman");
+
+
+$castingBatman1 = new Casting($georgesClooney, $batmanFilm, $batman);
+$castingBatman2 = new Casting($valKilmer, $batmanFilm, $batman);
+$castingBatman3 = new Casting($mickaelKeaton, $batmanFilm, $batman);
 
 
 

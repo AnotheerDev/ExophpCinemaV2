@@ -8,7 +8,7 @@ class Genre{
     
 
 
-    function __construct(string $type){
+    public function __construct(string $type){
         $this->type = $type;
         $this->films = [];
     }

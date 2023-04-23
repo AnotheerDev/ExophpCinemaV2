@@ -8,16 +8,18 @@ class Film{
     private int $duree;
     private Realisateur $realisateur;
     private Genre $genres;
+    private array $casting;  
 
 
 
-    function __construct(string $titre, string $sortie, int $duree, Realisateur $realisateur, Genre $genres){
+    public function __construct(string $titre, string $sortie, int $duree, Realisateur $realisateur, Genre $genres){
         $this->titre = $titre;
         $this->sortie = $sortie;
         $this->duree = $duree;
         $this->realisateur = $realisateur;
         $this->genres = $genres;
         $this->genres->ajoutFilm($this);
+        $this->casting = [];
     }
 
 
@@ -80,4 +82,13 @@ class Film{
         echo " Le genre du film est : $this->genres <br>";
     }
     
+    public function ajoutCasting(Casting $casting){
+    //permet de vérifier si l'acteur correspond bien 
+        if($casting->getFilm() == $this){
+            $this->casting[] = $casting;
+        }
+    }
+
+
+
 }
