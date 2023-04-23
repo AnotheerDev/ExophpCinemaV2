@@ -25,7 +25,7 @@ spl_autoload_register(function ($class_name) {
     require 'class/' . $class_name . '.php';
 });
 
-
+// harmoniser mon code virer les echo de mes functions et les remplacer pour des $result puis echo le $result à la fin 
 // Penser à créer une classe puis à la tester puis passer à la suite (ne pas tout créer d'un coup) realisateur => genre => film 
 
 // créer une classe associative pour mettre plusieurs classe ( acteur film ) dedans ex fin de la video 2
@@ -85,3 +85,7 @@ echo "____________________________________<br>";
 echo $batman->getActeurRole();
 echo "____________________________________<br>";
 echo $georgesLucas->getFilmographie();
+echo "____________________________________<br>";
+echo $harrisonFord->getFilmographie();
+echo "____________________________________<br>";
+$batmanFilm->getGenerique();

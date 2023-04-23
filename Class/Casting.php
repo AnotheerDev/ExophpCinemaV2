@@ -1,13 +1,15 @@
 <?php
 
-class Casting{
+class Casting
+{
     //Attributs
     private Acteur $acteur;
     private Film $film;
     private Role $role;
 
 
-    public function __construct(Acteur $acteur, Film $film, Role $role){
+    public function __construct(Acteur $acteur, Film $film, Role $role)
+    {
         $this->acteur = $acteur;
         $this->film = $film;
         $this->role = $role;
@@ -20,33 +22,33 @@ class Casting{
 
 
     // getter et setter pour chaque attribut de ma class Casting :
-    public function getRole(){
+    public function getRole()
+    {
         return $this->role;
     }
 
-    public function setRole($role){
+    public function setRole($role)
+    {
         $this->role = $role;
     }
 
-    public function getFilm(){
+    public function getFilm()
+    {
         return $this->film;
     }
 
-    public function setFilm($film){
+    public function setFilm($film)
+    {
         $this->film = $film;
     }
 
-    public function getActeur(){
+    public function getActeur()
+    {
         return $this->acteur;
     }
 
-    public function setActeur($acteur){
+    public function setActeur($acteur)
+    {
         $this->acteur = $acteur;
     }
-
-
-
-
-
-
 }

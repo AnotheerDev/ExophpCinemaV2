@@ -24,4 +24,14 @@ class Acteur extends Personne
             $this->casting[] = $casting;
         }
     }
+
+
+    public function getFilmographie()
+    {
+        $result = "<h2>$this a joué les films suivants : </h2><br>";
+        foreach ($this->casting as $casting) {
+            $result .= $casting->getFilm() . "<br>";
+        }
+        echo $result;
+    }
 }
