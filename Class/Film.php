@@ -102,8 +102,8 @@ class Film
         echo "Information autour du film : $this->titre : <br>";
         echo "Le film est sorti le $this->sortie  <br>";
         echo "La durée est de : $this->duree minutes <br>";
-        echo " Le réalisateur est : $this->realisateur <br>";
-        echo " Le genre du film est : $this->genres <br>";
+        echo "Le réalisateur est : $this->realisateur <br>";
+        echo "Le genre du film est : $this->genres <br>";
     }
 
 
