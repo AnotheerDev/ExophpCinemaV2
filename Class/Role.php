@@ -39,9 +39,6 @@ class Role{
         foreach($this->casting as $cast => $casting){
             $result .= $casting->getActeur() . " dans " . $casting->getFilm() ."<br>";
         }
-
-
-
         echo $result;
     }
 
