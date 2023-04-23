@@ -19,7 +19,7 @@ class Acteur extends Personne{
         return $this->dateDeNaissance;
     }
 
-    public function set_dateDeNaissance($_dateDeNaissance){
+    public function set_dateDeNaissance($dateDeNaissance){
         $this->_dateDeNaissance = $dateDeNaissance;
     }
 
