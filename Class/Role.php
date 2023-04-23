@@ -22,10 +22,12 @@ class Role{
         $this->role = $role;
     }
 
+    
     // __toString ne pas trop mettre d'info dedans juste l'attribut MAJEUR
     public function __toString(){
         return $this-> role;
     }
+
 
     public function ajoutCasting(Casting $casting){
     //permet de vérifier si l'acteur correspond bien 
@@ -33,6 +35,7 @@ class Role{
             $this->casting[] = $casting;
         }
     }
+
 
     public function getActeurRole(){
         $result = "<h2>Le role de $this a été joué par : </h2><br>";

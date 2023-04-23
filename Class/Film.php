@@ -19,6 +19,7 @@ class Film{
         $this->realisateur = $realisateur;
         $this->genres = $genres;
         $this->genres->ajoutFilm($this);
+        $this->realisateur->ajoutFilm($this);
         $this->casting = [];
     }
 
