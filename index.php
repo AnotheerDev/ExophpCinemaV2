@@ -79,3 +79,5 @@ echo "____________________________________<br>";
 echo $joelScott->getInfo();
 echo "____________________________________<br>";
 echo $sf->listeGenreFilm();
+echo "____________________________________<br>";
+$batman->getActeurRole();

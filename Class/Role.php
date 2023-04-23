@@ -34,5 +34,16 @@ class Role{
         }
     }
 
+    public function getActeurRole(){
+        $result = "<h2>Le role de $this a été joué par : </h2><br>";
+        foreach($this->casting as $cast => $casting){
+            $result .= $casting->getActeur() . " dans " . $casting->getFilm() ."<br>";
+        }
+
+
+
+        echo $result;
+    }
+
 
 }

@@ -36,8 +36,7 @@ class Casting{
         $this->film = $film;
     }
 
-    public function getActeur()
-    {
+    public function getActeur(){
         return $this->acteur;
     }
 

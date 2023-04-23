@@ -70,9 +70,15 @@ class Film{
 
     // __toString ne pas trop mettre d'info dedans juste l'attribut MAJEUR
     public function __toString(){
-        return  $this->titre . " : " . $this->sortie . " " . $this->duree . " " . $this->realisateur . " " . $this->genres ."<br>";
+        return  $this->titre . "  " . "(" .$this->sortie . ")" ."<br>";
     }
 
+    public function ajoutCasting(Casting $casting){
+    //permet de vérifier si l'acteur correspond bien 
+        if($casting->getFilm() == $this){
+            $this->casting[] = $casting;
+        }
+    }
 
     public function getInfoFilm(){
         echo "Information autour du film : $this->titre : <br>";
@@ -82,12 +88,6 @@ class Film{
         echo " Le genre du film est : $this->genres <br>";
     }
     
-    public function ajoutCasting(Casting $casting){
-    //permet de vérifier si l'acteur correspond bien 
-        if($casting->getFilm() == $this){
-            $this->casting[] = $casting;
-        }
-    }
 
 
 
