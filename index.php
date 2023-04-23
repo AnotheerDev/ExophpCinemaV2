@@ -23,4 +23,35 @@ où ce rôle a été incarné par plusieurs acteurs.)<br></p>
 // façon plus rapide de faire ( autochargement des class) ça evite d'oublier des class sur des plus gros projets :
 spl_autoload_register(function ($class_name){
     require 'class/' . $class_name . '.php';
-})
+});
+
+
+
+
+
+$mickaelKeaton = new Acteur("Mickaël", "Keaton", "masculin", "05-11-1951");
+$markHamill = new Acteur("Mark", "Hamill", "masculin", "25-11-1951");
+$valKilmer = new Acteur("Val", "Kilmer", "masculin", "31-1-1959");
+$georgesClooney = new Acteur("Georges", "Clooney", "masculin", "06-05-1961");
+$harrisonFord = new Acteur("Harrison", "Ford", "masculin", "13-07-1942");
+
+
+$georgesLucas = new Realisateur ("Georges", "Lucas", "masculin", "14-05-1944");
+$ridleyScott = new Realisateur ("Ridley", "Scott", "masculin", "30-11-1937");
+$joelScott = new Realisateur ("Joel", "Scott", "masculin", "29-08-1939");
+
+
+echo $mickaelKeaton->getInfo();
+echo "____________________________________<br>";
+echo $markHamill->getInfo();
+echo "____________________________________<br>";
+echo $valKilmer->getInfo();
+echo "____________________________________<br>";
+echo $harrisonFord->getInfo();
+echo "____________________________________<br>";
+echo $georgesLucas->getInfo();
+echo "____________________________________<br>";
+echo $ridleyScott->getInfo();
+echo "____________________________________<br>";
+echo $joelScott->getInfo();
+echo "____________________________________<br>";

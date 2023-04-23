@@ -57,15 +57,15 @@ class Personne{
 
     // __toString ne pas trop mettre d'info dedans juste l'attribut MAJEUR, qu'on peut appeler après avec juste un $this au lieu de $this->_nom et $this->_prenom.
     public function __toString(){
-        return  $this->_nom . "  " . $this->_prenom ."<br>";
+        return  $this->nom . "  " . $this->prenom ."<br>";
     }
 
 
 
     public function getInfo(){
-        echo "Nom : $this->_nom <br>";
-        echo "Prenom : $this->_prenom <br>";
-        echo "Sexe : $this->_sexe <br>";
-        echo "Date de naissance : $this->_dateDeNaissance <br>";
+        echo "Nom : $this->nom <br>";
+        echo "Prenom : $this->prenom <br>";
+        echo "Sexe : $this->sexe <br>";
+        echo "Date de naissance : $this->dateDeNaissance <br>";
         }
 }
