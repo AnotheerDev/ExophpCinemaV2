@@ -41,6 +41,19 @@ $ridleyScott = new Realisateur ("Ridley", "Scott", "masculin", "30-11-1937");
 $joelScott = new Realisateur ("Joel", "Scott", "masculin", "29-08-1939");
 
 
+$fantastique = new Genre("Fantastique");
+$action = new Genre("Action");
+$sf = new Genre("Science-fiction");
+
+
+$starWars = new Film("Star-Wars", "19-10-1977", 121, $georgesLucas, $sf);
+$Batman = new Film("Batman", "19-07-1995", 122, $joelScott, $action);
+$bladeRunner = new Film("Blade Runner","15-09-1982", 117, $ridleyScott, $fantastique);
+
+
+
+
+
 echo $mickaelKeaton->getInfo();
 echo "____________________________________<br>";
 echo $markHamill->getInfo();
@@ -55,3 +68,4 @@ echo $ridleyScott->getInfo();
 echo "____________________________________<br>";
 echo $joelScott->getInfo();
 echo "____________________________________<br>";
+echo $sf->listeGenreFilm();

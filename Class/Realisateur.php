@@ -20,7 +20,7 @@ class Realisateur extends Personne{
     }
 
     public function set_dateDeNaissance($dateDeNaissance){
-        $this->_dateDeNaissance = $dateDeNaissance;
+        $this->dateDeNaissance = $dateDeNaissance;
     }
 
     public function get_nom(){
@@ -28,7 +28,7 @@ class Realisateur extends Personne{
     }
 
     public function set_nom($nom){
-        $this->_nom = $nom;
+        $this->nom = $nom;
     }
 
     public function get_prenom(){
@@ -36,7 +36,7 @@ class Realisateur extends Personne{
     }
 
     public function set_prenom($prenom){
-        $this->_prenom = $prenom;
+        $this->prenom = $prenom;
     }
 
     public function get_sexe(){
