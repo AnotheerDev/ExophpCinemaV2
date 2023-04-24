@@ -8,19 +8,19 @@ class Film
     private DateTime $sortie;
     private int $duree;
     private Realisateur $realisateur;
-    private Genre $genres;
+    private Genre $genre;
     private array $castings;
 
 
 
-    public function __construct(string $titre, string $sortie, int $duree, Realisateur $realisateur, Genre $genres)
+    public function __construct(string $titre, string $sortie, int $duree, Realisateur $realisateur, Genre $genre)
     {
         $this->titre = $titre;
         $this->sortie = new DateTime ($sortie);
         $this->duree = $duree;
         $this->realisateur = $realisateur;
-        $this->genres = $genres;
-        $this->genres->ajoutFilm($this);
+        $this->genre = $genre;
+        $this->genre->ajoutFilm($this);
         $this->realisateur->ajoutFilm($this);
         $this->castings = [];
     }
@@ -71,14 +71,14 @@ class Film
         $this->realisateur = $realisateur;
     }
 
-    public function getGenres()
+    public function getGenre()
     {
-        return $this->genres;
+        return $this->genre;
     }
 
-    public function setGenres($genres)
+    public function setGenre($genre)
     {
-        $this->genres = $genres;
+        $this->genre = $genre;
     }
 
 
@@ -108,7 +108,7 @@ class Film
         echo "Le film est sorti le (".$this->sortie->format('Y').")<br>";
         echo "La durée est de : ".$this->getDureeHeuresMinutes() ." <br>";
         echo "Le réalisateur est : $this->realisateur <br>";
-        echo "Le genre du film est : $this->genres <br>";
+        echo "Le genre du film est : $this->genre <br>";
     }
 
 
