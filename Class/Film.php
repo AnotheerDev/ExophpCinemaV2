@@ -9,7 +9,7 @@ class Film
     private int $duree;
     private Realisateur $realisateur;
     private Genre $genres;
-    private array $casting;
+    private array $castings;
 
 
 
@@ -22,7 +22,7 @@ class Film
         $this->genres = $genres;
         $this->genres->ajoutFilm($this);
         $this->realisateur->ajoutFilm($this);
-        $this->casting = [];
+        $this->castings = [];
     }
 
 
@@ -112,7 +112,7 @@ class Film
     {
         $result =   "Le film " . $this . "a été réalisé par " . $this->realisateur . "<br>";
         "Avec : <br>";
-        foreach ($this->casting as $casting) {
+        foreach ($this->castings as $casting) {
             $result .= $casting->getActeur() .
                 " dans le role de : " . $casting->getRole() . "<br>";
         }

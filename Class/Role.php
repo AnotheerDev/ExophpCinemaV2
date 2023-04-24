@@ -4,13 +4,13 @@ class Role
 {
     // attributs
     private string $role;
-    private array $casting;
+    private array $castings;
 
 
     public function __construct(string $role)
     {
         $this->role = $role;
-        $this->casting = [];
+        $this->castings = [];
     }
 
 
@@ -34,11 +34,11 @@ class Role
     }
 
 
-    public function ajoutCasting(Casting $casting)
+    public function ajoutCasting(Casting $castings)
     {
         //permet de vérifier si l'acteur correspond bien 
-        if ($casting->getRole() == $this) {
-            $this->casting[] = $casting;
+        if ($castings->getRole() == $this) {
+            $this->castings[] = $castings;
         }
     }
 
@@ -46,7 +46,7 @@ class Role
     public function getActeurRole()
     {
         $result = "<h2>Le role de $this a été joué par : </h2><br>";
-        foreach ($this->casting as $casting) {
+        foreach ($this->castings as $casting) {
             $result .= $casting->getActeur() . " dans " . $casting->getFilm() . "<br>";
         }
         echo $result;
