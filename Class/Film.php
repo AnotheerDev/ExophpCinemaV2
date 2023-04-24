@@ -5,7 +5,7 @@ class Film
 
     // attributs
     private string $titre;
-    private string $sortie;
+    private DateTime $sortie;
     private int $duree;
     private Realisateur $realisateur;
     private Genre $genres;
@@ -16,7 +16,7 @@ class Film
     public function __construct(string $titre, string $sortie, int $duree, Realisateur $realisateur, Genre $genres)
     {
         $this->titre = $titre;
-        $this->sortie = $sortie;
+        $this->sortie = new DateTime ($sortie);
         $this->duree = $duree;
         $this->realisateur = $realisateur;
         $this->genres = $genres;
@@ -24,10 +24,6 @@ class Film
         $this->realisateur->ajoutFilm($this);
         $this->castings = [];
     }
-
-
-
-
 
     // getter et setter pour chaque attribut de ma class Film :
     public function getTitre()
@@ -53,6 +49,11 @@ class Film
     public function getDuree()
     {
         return $this->duree;
+    }
+
+    public function getDureeHeuresMinutes()
+    {
+        return date('H:i', mktime(0, $this->duree));
     }
 
     public function setDuree($duree)
@@ -84,8 +85,12 @@ class Film
     // __toString ne pas trop mettre d'info dedans juste l'attribut MAJEUR
     public function __toString()
     {
-        return  $this->titre . "  " . "(" . $this->sortie . ")";
+        return  $this->titre . "  " . "(" . $this->sortie->format('Y') . ")";
     }
+
+
+    
+
 
 
     public function ajoutCasting(Casting $casting)
@@ -100,8 +105,8 @@ class Film
     public function getInfoFilm()
     {
         echo "Information autour du film : $this->titre : <br>";
-        echo "Le film est sorti le $this->sortie  <br>";
-        echo "La durée est de : $this->duree minutes <br>";
+        echo "Le film est sorti le (".$this->sortie->format('Y').")<br>";
+        echo "La durée est de : ".$this->getDureeHeuresMinutes() ." <br>";
         echo "Le réalisateur est : $this->realisateur <br>";
         echo "Le genre du film est : $this->genres <br>";
     }

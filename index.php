@@ -31,7 +31,7 @@ spl_autoload_register(function ($class_name) {
 // créer une classe associative pour mettre plusieurs classe ( acteur film ) dedans ex fin de la video 2
 // class associative pour acteur et film et Role / film et réal = filmographie.
 // supprimer les snakecase  | mettre l'array casting au pluriel | trouver comment passer la durée des films de minutes à heure minute sans division
-
+// fonction usort pour faire sortir dans l'ordre de parution
 
 $mickaelKeaton = new Acteur("Mickaël", "Keaton", "masculin", "05-11-1951");
 $markHamill = new Acteur("Mark", "Hamill", "masculin", "25-11-1951");
@@ -90,3 +90,6 @@ echo "____________________________________<br>";
 $harrisonFord->getFilmographie();
 echo "____________________________________<br>";
 $batmanFilm->getGenerique();
+echo "____________________________________<br>";
+echo $batmanFilm->getDureeHeuresMinutes();
+echo $batmanFilm->getInfoFilm();
