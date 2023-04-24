@@ -19,12 +19,12 @@ class Genre
 
 
     // getter et setter pour chaque attribut de ma class
-    public function get_films()
+    public function getFilms()
     {
         return $this->films;
     }
 
-    public function set_films($films)
+    public function setFilms($films)
     {
         $this->films = $films;
     }

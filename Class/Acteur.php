@@ -4,7 +4,6 @@ class Acteur extends Personne
 {
     // attributs ( ils sont repris de la class parent Personne mais on peut en rajouter plus tard)
     private array $casting;
-    private Film $films;
 
 
     public function __construct(string $nom, string $prenom, string $sexe, string $dateDeNaissance)

@@ -30,6 +30,7 @@ spl_autoload_register(function ($class_name) {
 
 // créer une classe associative pour mettre plusieurs classe ( acteur film ) dedans ex fin de la video 2
 // class associative pour acteur et film et Role / film et réal = filmographie.
+// supprimer les snakecase  | mettre l'array casting au pluriel | trouver comment passer la durée des films de minutes à heure minute sans division
 
 
 $mickaelKeaton = new Acteur("Mickaël", "Keaton", "masculin", "05-11-1951");

@@ -30,52 +30,52 @@ class Film
 
 
     // getter et setter pour chaque attribut de ma class Film :
-    public function get_titre()
+    public function getTitre()
     {
         return $this->titre;
     }
 
-    public function set_titre($titre)
+    public function setTitre($titre)
     {
         $this->titre = $titre;
     }
 
-    public function get_sortie()
+    public function getSortie()
     {
         return $this->sortie;
     }
 
-    public function set_sortie($sortie)
+    public function setSortie($sortie)
     {
         $this->sortie = $sortie;
     }
 
-    public function get_duree()
+    public function getDuree()
     {
         return $this->duree;
     }
 
-    public function set_duree($duree)
+    public function setDuree($duree)
     {
         $this->duree = $duree;
     }
 
-    public function get_realisateur()
+    public function getRealisateur()
     {
         return $this->realisateur;
     }
 
-    public function set_realisateur($realisateur)
+    public function setRealisateur($realisateur)
     {
         $this->realisateur = $realisateur;
     }
 
-    public function get_genres()
+    public function getGenres()
     {
         return $this->genres;
     }
 
-    public function set_genres($genres)
+    public function setGenres($genres)
     {
         $this->genres = $genres;
     }
