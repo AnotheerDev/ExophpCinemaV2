@@ -31,7 +31,7 @@ spl_autoload_register(function ($class_name) {
 // créer une classe associative pour mettre plusieurs classe ( acteur film ) dedans ex fin de la video 2
 // class associative pour acteur et film et Role / film et réal = filmographie.
 // supprimer les snakecase  | mettre l'array casting au pluriel | trouver comment passer la durée des films de minutes à heure minute sans division
-// fonction usort pour faire sortir dans l'ordre de parution
+// fonction usort pour faire sortir dans l'ordre de parution du plus recent au moins recent les films d'un réal (fonction anonyme)
 
 $mickaelKeaton = new Acteur("Mickaël", "Keaton", "masculin", "05-11-1951");
 $markHamill = new Acteur("Mark", "Hamill", "masculin", "25-11-1951");
@@ -53,7 +53,8 @@ $sf = new Genre("Science-fiction");
 $starWars = new Film("Star-Wars", "19-10-1977", 121, $georgesLucas, $sf);
 $batmanFilm = new Film("Batman", "19-07-1995", 122, $joelScott, $action);
 $bladeRunner = new Film("Blade Runner", "15-09-1982", 117, $ridleyScott, $fantastique);
-
+$leDernierDuel = new Film("Le dernier duel", "15-10-2021", 152, $ridleyScott, $fantastique);
+$exodus = new Film("Exodus", "24-12-2014", 150, $ridleyScott, $fantastique);
 
 $batman = new Role("Batman");
 $hanSolo = new Role("Han Solo");
@@ -92,4 +93,7 @@ echo "____________________________________<br>";
 $batmanFilm->getGenerique();
 echo "____________________________________<br>";
 echo $batmanFilm->getDureeHeuresMinutes();
+echo "____________________________________<br>";
 echo $batmanFilm->getInfoFilm();
+echo "____________________________________<br>";
+$ridleyScott->getFilmographie();

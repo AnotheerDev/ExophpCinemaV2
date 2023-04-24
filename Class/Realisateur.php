@@ -23,12 +23,41 @@ class Realisateur extends Personne
     }
 
 
+
+
+
+
+
+
+
+    //--------------------- test de tri ----------------------
+
+    public static function cmp($a, $b) 
+    {
+    return strcmp($a->sortie, $b->sortie);
+    }
+
+
     public function getFilmographie()
     {
         $result = "<h2>$this a réalisé les films suivants : </h2><br>";
+        usort($this->films, function($a, $b) {
+            return $a->getSortie() < $b->getSortie();
+        });
         foreach ($this->films as $film) {
             $result .= $film . "<br>";
         }
         echo $result;
     }
+
+
+// modifier avec le usort pour sortir les films du plus recent au moins recent
+    // public function getFilmographie()
+    // {
+    //     $result = "<h2>$this a réalisé les films suivants : </h2><br>";
+    //     foreach ($this->films as $film) {
+    //         $result .= $film . "<br>";
+    //     }
+    //     echo $result;
+    // }
 }
