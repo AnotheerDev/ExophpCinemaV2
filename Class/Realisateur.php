@@ -42,7 +42,7 @@ class Realisateur extends Personne
     {
         $result = "<h2>$this a réalisé les films suivants : </h2><br>";
         usort($this->films, function($a, $b) {
-            return $a->getSortie() < $b->getSortie();
+            return (int) ($a->getSortie() < $b->getSortie());
         });
         foreach ($this->films as $film) {
             $result .= $film . "<br>";
